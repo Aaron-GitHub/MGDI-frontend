@@ -1,0 +1,34 @@
+<div style="height: 100vh;">
+    <div class="auth-wrapper d-flex no-block justify-content-center bg-dark" style="height: 100vh;">
+        <div class="auth-box bg-dark">
+            <div id="loginform">
+                <br>
+                <div class="text-center pt-3 pb-3">
+                    <span class="db"><img src="assets/images/logo.png" alt="logo"/></span>
+                </div>
+                <div class="text-center pt-3 pb-3">
+                    <span class="db"><img src="assets/images/logo-text2.png" alt="logo" width="300"/></span>
+                </div>
+                <form class="form-horizontal mt-3" id="loginform" action="index.html">
+                    <div class="row pb-4">
+                        <div class="col-12 text-center">
+                            <div *ngIf="isError" class="alert alert-danger" role="alert">
+                                <b>Alerta:</b> No existe el usuario, pongase en conacto con el administrador.
+                            </div>
+                            <div *ngIf="isSuccess" class="alert alert-success" role="alert">
+                                <b>Exito:</b> Usuario registrado, redirigiendo...
+                            </div>
+                            <a (click)="login()"><img src="assets/images/ms_signin_light.png"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <br>
+            <footer class=" border-top text-center border-secondary">
+                <br>
+                <b style="color: white;">MGDI - Mining Group Data Integration - 2021</b>
+            </footer>
+        </div>
+    </div>
+    
+</div> 
